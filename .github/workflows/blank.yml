@@ -26,6 +26,7 @@ jobs:
       - name: "show message"
         run: echo "Hello world"
       - name: "showing env variables  values"
+        if: ${{env.platform=='aws'}}
         run: |
           echo "Platform: ${{env.platform}}"
           echo "Region: ${{env.region}}"
