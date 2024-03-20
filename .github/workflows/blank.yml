@@ -26,6 +26,6 @@ jobs:
       - name: "show message"
         run: echo "Hello world"
       - name: "showing env variables  values"
-        run:
+        run: |
           echo "Platform: ${{env.platform}}"
           echo "Region: ${{env.region}}"
