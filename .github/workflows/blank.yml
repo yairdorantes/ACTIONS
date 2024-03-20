@@ -34,6 +34,12 @@ jobs:
           echo "Region: ${{env.region}}"
           echo "username: ${{env.username}}"
           echo "password: ${{env.password}}"
+
+      - name: "showing onlyif its the right user"
+        if: ${{env.username!='' && env.password!=''}}
+        run: |
+          echo "a user exists!"
+
       - name: "showing default variables"
         run: |
           echo "event ${{toJSON(github.event)}}"
